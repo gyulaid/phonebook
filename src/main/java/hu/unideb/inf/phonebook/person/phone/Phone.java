@@ -15,4 +15,8 @@ public class Phone {
     private String prefix;
     private String number;
 
+    @Override
+    public String toString() {
+        return prefix+number;
+    }
 }

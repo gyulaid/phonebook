@@ -1,10 +1,10 @@
 package hu.unideb.inf.phonebook.person;
 
+import hu.unideb.inf.phonebook.person.phone.Phone;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -19,9 +19,26 @@ public class PersonController {
     @GetMapping
     public String getPeople(Model model) {
 
+        Person person = new Person();
+        Phone phone = new Phone();
+
+        person.setPhone(phone);
+        model.addAttribute("person", person);
+
         List<Person> people = personService.getPeople();
         model.addAttribute("people", people);
 
-        return "";
+        return "peoplePage";
     }
-}
+
+    @PostMapping
+    public String addPerson(@ModelAttribute("person") Person person, Model model) {
+
+        personService.savePerson(person);
+
+        model.addAttribute("people", personService.getPeople());
+
+        return "peoplePage";
+    }
+
+ }

@@ -1,0 +1,78 @@
+.fixedTable {
+    position: absolute;
+    top: 15%;
+    left: 25%;
+}
+
+.fixedTable > table tbody {
+    display: block;
+    overflow: auto;
+    width: 750px;
+    height: 550px;
+    color: whitesmoke;
+}
+
+.fixedTable > table thead tr {
+    display: block;
+}
+
+.fixedTable table thead {
+    background-color: rgba(70, 110, 70, 70%);
+    color: whitesmoke;
+}
+
+.fixedTable table {
+    background-color: rgba(50, 70, 50, 70%);
+    width: 750px;
+    height: 550px;
+    table-layout: fixed;
+    border: solid medium black;
+    border-collapse: collapse;
+}
+
+.fixedTable td, .fixedTable th {
+    padding: 5px;
+    border: solid thin black;
+    height: 10px;
+}
+
+#firstName, #firstNameColumn {
+    width: 250px;
+}
+
+#lastName, #lastNameColumn {
+    width: 250px;
+}
+
+#phoneNumber, #phoneNumberColumn {
+    width: 250px;
+}
+
+form {
+    text-align: left;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14);
+    padding: 20px;
+}
+
+input {
+    margin-bottom: 30px;
+    background-color: rgba(200, 200, 200, 50%);
+    color: whitesmoke;
+}
+
+
+.left {
+    background-color: rgba(50, 70, 50, 70%);
+    position: absolute;
+    top: 15%;
+    left: 2%;
+    width: 300px;
+    height: 550px;
+    border: solid medium black;
+    color: whitesmoke;
+}
+
+.left > h1 {
+    text-align: center;
+    text-shadow: 10px 10px 10px rgba(0, 0, 0, 10%);
+}

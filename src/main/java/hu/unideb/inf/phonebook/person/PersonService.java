@@ -23,6 +23,9 @@ public class PersonService {
         personRepository.deleteById(id);
     }
 
+    public void savePerson(Person person) {
+        personRepository.save(person);
+    }
 
 
 }

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link href="../static/css/peoplePage.css" rel="stylesheet" th:href="@{/css/peoplePage.css}" type="text/css">
+</head>
+<th:block th:include="pageBase"></th:block>
+<body>
+
+
+<div class="left">
+    <h1>Person form</h1>
+    <form action="#" th:action="@{/people}" th:object="${person}" method="post">
+        <input type="hidden" id="number" th:field="*{Id}"><br>
+        <label>First name:</label><br>
+        <input type="text" value="" th:field="*{firstName}"><br>
+        <label>Last name:</label><br>
+        <input type="text" th:field="*{lastName}"><br>
+        <label>Phone number prefix:</label><br>
+        <input type="text" th:field="*{phone.prefix}"><br>
+        <label>Phone number:</label><br>
+        <input type="text" th:field="*{phone.number}"><br>
+
+        <input type="submit" value="Add">
+        <input type="reset" value="Reset">
+    </form>
+</div>
+
+
+<div class="fixedTable">
+    <table class="peopleTable">
+        <thead>
+        <tr>
+            <th id="firstName">Keresztnév</th>
+            <th id="lastName">Vezetéknév</th>
+            <th id="phoneNumber">Telefonszám</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="person : ${people}">
+            <td id="firstNameColumn" th:text="${person.getFirstName()}"></td>
+            <td id="lastNameColumn" th:text="${person.getLastName()}"></td>
+            <td id="phoneNumberColumn" th:text="${person.getPhone().toString()}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
