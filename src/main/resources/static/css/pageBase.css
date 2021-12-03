@@ -1,0 +1,35 @@
+body {
+    background-image: url("../img/mainbg.jpg");
+    background-size: 100%;
+}
+
+.headline {
+    background-color: rgba(100, 120, 100, 50%);
+    border-color: rgba(100, 120, 100, 15%);
+    border-radius: 1em;
+    border: solid;
+    height: 7vh;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    box-shadow: 10px 13px 35px rgba(0, 0, 0, 100%);
+}
+
+.headline > a {
+    text-decoration: none;
+    color: whitesmoke;
+    size: inherit;
+    padding: 5px;
+    border-right: solid black;
+    width: 33%;
+    text-align: center;
+    font-size: 200%;
+}
+
+.headline > a:hover {
+    background-color: rgba(130, 180, 130, 50%);
+}
+
+.headline > a:active {
+    background-color: rgba(150, 200, 150, 70%);
+}
