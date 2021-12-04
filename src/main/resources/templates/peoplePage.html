@@ -10,7 +10,6 @@
 <div class="left">
     <h1>Person form</h1>
     <form action="#" th:action="@{/people}" th:object="${person}" method="post">
-        <input type="hidden" id="number" th:field="*{Id}"><br>
         <label>First name:</label><br>
         <input type="text" value="" th:field="*{firstName}"><br>
         <label>Last name:</label><br>
@@ -33,6 +32,8 @@
             <th id="firstName">Keresztnév</th>
             <th id="lastName">Vezetéknév</th>
             <th id="phoneNumber">Telefonszám</th>
+            <th id="update"></th>
+            <th id="delete"></th>
         </tr>
         </thead>
         <tbody>
@@ -40,6 +41,10 @@
             <td id="firstNameColumn" th:text="${person.getFirstName()}"></td>
             <td id="lastNameColumn" th:text="${person.getLastName()}"></td>
             <td id="phoneNumberColumn" th:text="${person.getPhone().toString()}"></td>
+            <td id="updateColumn">Update</td>
+            <td id="deleteColumn">
+             <a id="deleteButton" th:href="@{/people/delete/{id}(id=${person.id})}">X</a>
+            </td>
         </tr>
         </tbody>
     </table>

@@ -37,16 +37,34 @@
 }
 
 #firstName, #firstNameColumn {
-    width: 250px;
+    width: 220px;
 }
 
 #lastName, #lastNameColumn {
-    width: 250px;
+    width: 220px;
 }
 
 #phoneNumber, #phoneNumberColumn {
-    width: 250px;
+    width: 220px;
 }
+
+#update, #updateColumn {
+    width: 70px;
+    text-align: center;
+}
+
+#delete, #deleteColumn {
+    text-align: center;
+    width: 20px;
+    color: red;
+    text-decoration: none;
+}
+
+#deleteColumn > a:visited, #deleteColumn > a:link, #deleteColumn > a:active {
+    text-decoration: none;
+    color: red;
+}
+
 
 form {
     text-align: left;

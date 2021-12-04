@@ -32,13 +32,19 @@ public class PersonController {
     }
 
     @PostMapping
-    public String addPerson(@ModelAttribute("person") Person person, Model model) {
+    public String addPerson(@ModelAttribute("person") Person person) {
 
         personService.savePerson(person);
 
-        model.addAttribute("people", personService.getPeople());
-
-        return "peoplePage";
+        return "redirect:/people";
     }
 
- }
+    @GetMapping("/delete/{id}")
+    public String removePerson(@PathVariable Long id) {
+
+        personService.deletePerson(id);
+
+        return "redirect:/people";
+    }
+
+}
