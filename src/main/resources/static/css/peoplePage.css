@@ -65,6 +65,11 @@
     color: red;
 }
 
+#updateColumn > a:visited, #updateColumn > a:link, #updateColumn > a:active {
+    text-decoration: none;
+    color: greenyellow;
+}
+
 
 form {
     text-align: left;

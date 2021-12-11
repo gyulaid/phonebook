@@ -6,8 +6,8 @@ body {
 .headline {
     background-color: rgba(100, 120, 100, 50%);
     border-color: rgba(100, 120, 100, 15%);
-    border-radius: 1em;
     border: solid;
+    border-radius: 1em;
     height: 7vh;
     width: 100%;
     align-items: center;
@@ -21,13 +21,18 @@ body {
     size: inherit;
     padding: 5px;
     border-right: solid black;
-    width: 33%;
+    border-left: solid black;
+    border-collapse: collapse;
+    width: 100%;
+    height: fit-content;
     text-align: center;
     font-size: 200%;
 }
 
 .headline > a:hover {
     background-color: rgba(130, 180, 130, 50%);
+    border-radius: inherit;
+    border-collapse: collapse;
 }
 
 .headline > a:active {

@@ -1,0 +1,56 @@
+form {
+    text-align: left;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14);
+    padding: 20px;
+}
+
+input {
+    margin-bottom: 30px;
+    background-color: rgba(200, 200, 200, 50%);
+    color: whitesmoke;
+}
+
+#back {
+    border: solid medium white;
+    border-bottom: grey;
+    border-right: grey;
+    background-color: rgba(200, 200, 200, 50%);
+    color: whitesmoke;
+    margin: 20px;
+    margin-top: 0px;
+    width: 98px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: normal;
+    font-size: small;
+
+}
+
+#back > a:visited, #back > a:link, #back > a:active {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+#submit {
+    margin-bottom: 0px;
+    width: 100px;
+    font-weight: normal;
+    font-size: small;
+}
+
+
+.left {
+    background-color: rgba(50, 70, 50, 70%);
+    position: absolute;
+    top: 15%;
+    left: 2%;
+    width: 300px;
+    height: 550px;
+    border: solid medium black;
+    color: whitesmoke;
+}
+
+.left > h1 {
+    text-align: center;
+    text-shadow: 10px 10px 10px rgba(0, 0, 0, 10%);
+}

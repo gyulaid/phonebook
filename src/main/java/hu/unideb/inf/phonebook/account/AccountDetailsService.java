@@ -26,10 +26,10 @@ public class AccountDetailsService implements UserDetailsService {
         }
 
         User.UserBuilder builder = User.withUsername(userName)
-                .password(new BCryptPasswordEncoder().encode(account.get().getPassword()));
+                .password(account.get().getPassword());
 
         if (account.get().getRole().equals(Role.ADMIN)) {
-            builder.roles("USER, ADMIN");
+            builder.roles("ADMIN", "USER");
         } else if (account.get().getRole().equals(Role.USER)) {
             builder.roles("USER");
         }

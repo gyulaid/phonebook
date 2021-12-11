@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Login</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="../static/css/loginPage.css" rel="stylesheet" th:href="@{/css/loginPage.css}" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<!-- Include _menu.html -->
+<th:block th:include="pageBase"></th:block>
+
+<form id="login" name='f' th:action="@{/login}" method='POST'>
+    <h3>Login</h3>
+
+    <label for="Uname">Username</label>
+    <input type="text" name="username" placeholder="Username" id="Uname" value='' required>
+
+    <label for="Pass">Password</label>
+    <input type="password" name="password" placeholder="Password" id="Pass" value='' required>
+
+    <input type="submit" name="submit" id="log" value="Sign in">
+
+</form>
+
+
+</body>
+
+</html>

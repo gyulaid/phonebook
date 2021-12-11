@@ -47,4 +47,22 @@ public class PersonController {
         return "redirect:/people";
     }
 
+    @GetMapping("/update/{id}")
+    public String getUpdateForm(@PathVariable Long id, Model model) {
+
+        Person personToUpdate = personService.getPerson(id);
+
+        model.addAttribute("personToUpdate", personToUpdate);
+
+        return "updatePersonPage";
+    }
+
+    @PostMapping("/update/{id}")
+    public String updatePerson(@PathVariable Long id, Person person) {
+
+        personService.savePerson(person);
+
+        return "redirect:/people";
+    }
+
 }

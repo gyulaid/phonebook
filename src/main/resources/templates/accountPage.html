@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="../static/css/accountPage.css" rel="stylesheet" th:href="@{/css/accountPage.css}" type="text/css">
+</head>
+<body>
+<th:block th:include="pageBase"></th:block>
+
+<div class="accountBox">
+    <div class="username">
+        <span class="title">Username: </span>
+        <span class="content" th:text="${accountInfo.getUserName()}"></span>
+    </div>
+    <div class="role">
+        <span class="title">Role: </span>
+        <span class="content" th:text="${accountInfo.getRole()}"></span>
+    </div>
+</div>
+</body>
+</html>

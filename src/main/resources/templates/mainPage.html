@@ -1,8 +1,16 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
 <head>
+    <link href="../static/css/mainPage.css" rel="stylesheet" th:href="@{/css/mainPage.css}" type="text/css">
 </head>
 <body>
 <th:block th:include="pageBase"></th:block>
+
+<div class="loginBox"  sec:authorize="!isAuthenticated()">
+    <a href="/login"><span>Login</span></a>
+</div>
+<div class="logoutBox" sec:authorize="isAuthenticated()">
+    <a href="/logout"><span>Sign out</span></a>
+</div>
 </body>
 </html>

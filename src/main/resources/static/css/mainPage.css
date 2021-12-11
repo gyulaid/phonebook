@@ -1,0 +1,49 @@
+.loginBox {
+    width: 200px;
+    height: 100px;
+    font-weight: bold;
+    color: whitesmoke;
+    border: solid medium black;
+    border-radius: 1em;
+    background-color: rgba(100, 120, 100, 50%);
+    position: absolute;
+    top: 40%;
+    left: 43%;
+}
+
+.logoutBox {
+    width: 200px;
+    height: 100px;
+    font-weight: bold;
+    color: whitesmoke;
+    border: solid medium black;
+    border-radius: 1em;
+    background-color: rgba(100, 120, 100, 50%);
+    position: absolute;
+    top: 40%;
+    left: 43%;
+}
+
+a {
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+a:active, a:link, a:visited {
+    font-size: larger;
+    color: whitesmoke;
+    width: 100%;
+    height: 100%;
+}
+
+.loginBox > a:hover, .logoutBox > a:hover  {
+    background-color: rgba(130, 180, 130, 50%);
+    border-radius: inherit;
+    border-collapse: collapse;
+}
+
+.loginBox > a:active, .logoutBox > a:active  {
+    background-color: rgba(150, 200, 150, 70%);
+}

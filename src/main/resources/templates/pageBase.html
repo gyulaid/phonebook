@@ -1,10 +1,10 @@
-<head xmlns:th="http://www.thymeleaf.org">
+<head xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
     <link href="../static/css/pageBase.css" rel="stylesheet" th:href="@{/css/pageBase.css}" type="text/css">
 </head>
 <body>
 <div class="headline">
     <a th:href="@{/}">Main page</a>
-    <a th:href="@{/people}">People</a>
-    <a th:href="@{/account}">Account</a>
+    <a sec:authorize="hasRole('ROLE_USER')" th:href="@{/people}">People</a>
+    <a sec:authorize="hasRole('ROLE_USER')" th:href="@{/account}">Account</a>
 </div>
 </body>
